@@ -1,0 +1,62 @@
+= sortable
+
+* http://github.com/bscofield/sortable
+
+== DESCRIPTION:
+
+Sortable provides a DSL for defining sort order on any Ruby object
+
+To use it, you just call the sortable method and pass it a list of methods and/or blocks; when
+you call sort on a collection of these objects, each method/block is evaluated in turn, and the 
+first that provides a non-zero sort value is used.
+
+== EXAMPLE:
+
+  require 'sortable'
+  
+  class Book
+    attr_accessor :author, :title
+    
+    sortable :author, lambda {|book| book.title.sub(/^(The|A|An) /, '')}
+    
+    def initialize(author, title)
+      self.author = author
+      self.title  = title
+    end
+  end
+  
+  fforde  = Book.new('Fforde', 'Something Rotten')
+  stroud1 = Book.new('Stroud', 'The Golem\'s Eye')
+  stroud2 = Book.new('Stroud', 'The Amulet of Samarkand')
+  colfer  = Book.new('Colfer', 'Artemis Fowl')
+  
+  [fforde, stroud1, stroud2, colfer].sort #=> colfer, fforde, stroud2, stroud1
+
+== INSTALL:
+
+Installation is available by `sudo gem install sortable`.
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2009 Ben Scofield
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
