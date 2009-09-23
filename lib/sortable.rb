@@ -23,5 +23,3 @@ module Sortable
     end
   end
 end
-
-Object.send(:include, Sortable)
