@@ -10,7 +10,7 @@ Hoe.plugin :newgem
 # Run 'rake -T' to see list of generated tasks (from gem root directory)
 $hoe = Hoe.spec 'sortable' do
   self.developer 'Ben Scofield', 'ruby@turrean.com'
-  self.rubyforge_name       = self.name
+  self.rubyforge_name       = 'sortable-object'
 end
 
 require 'newgem/tasks'
