@@ -35,7 +35,7 @@ first that provides a non-zero sort value is used.
 == INSTALL:
 
 Installation is available with a simple: 
-  sudo gem install bscofield-sortable
+  sudo gem install sortable
 
 == LICENSE:
 
