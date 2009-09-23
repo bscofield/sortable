@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sortable}
-  s.version = "0.0.1"
+  s.version = "0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ben Scofield"]
@@ -18,7 +18,7 @@ first that provides a non-zero sort value is used.}
   s.homepage = %q{http://github.com/bscofield/sortable}
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
-  s.rubyforge_project = %q{sortable}
+  s.rubyforge_project = %q{sortable-object}
   s.rubygems_version = %q{1.3.4}
   s.summary = %q{Sortable provides a DSL for defining sort order on any Ruby object  To use it, you just call the sortable method and pass it a list of methods and/or blocks; when you call sort on a collection of these objects, each method/block is evaluated in turn, and the  first that provides a non-zero sort value is used.}
   s.test_files = ["test/test_helper.rb", "test/test_sortable.rb"]

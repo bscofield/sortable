@@ -1,5 +1,5 @@
 module Sortable
-  VERSION = '0.0.1'
+  VERSION = '0.1'
   
   def self.included(base)
     base.extend Sortable::ClassMethods

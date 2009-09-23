@@ -1,4 +1,7 @@
-=== 0.0.1 2009-09-23
+=== 0.0.2 2009-09-23
+
+* 1 minor enhancement: 
+  * Don't pollute the Object namespace by default [foca]
 
 * 1 major enhancement:
   * Initial release
